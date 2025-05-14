@@ -1,12 +1,12 @@
-const RandomAPIURL = "https://api.quotable.io"
-const quoteDisplayElement = document.getElementById("quoteDisplay")
+const Random_API_URL = 'https://random-word-api.herokuapp.com/word?number=40'
+const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 
 
 function getRandomQuote() {
-    return fetch(RANDOM_QUOTE_API_URL)
+    return fetch(Random_API_URL)
     .then(response => response.json())
-    .then(data=> data.content)
+    .then(data=> data.join(''))
 }
 
 async function renderNewQuote() {
@@ -17,5 +17,8 @@ async function renderNewQuote() {
         characterSpan.innerText = character
         quoteDisplayElement.appendChild(characterSpan)
     })
-    quoteInputElement.value = null
+    quoteInputElement.value = ''
 }
+
+renderNewQuote()
+
