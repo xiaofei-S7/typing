@@ -1,4 +1,4 @@
-const Random_API_URL = 'https://random-word-api.herokuapp.com/word?number=40'
+const Random_API_URL = 'https://sentence.underthekey.com/random?count=1'
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 
